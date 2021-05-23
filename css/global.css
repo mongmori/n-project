@@ -1,11 +1,108 @@
-.nav {
+/* common */
+:root {
+    /* 반복적으로 재사용할 값들을 변수화해서 모아놓을 수 있다고 함 */
+    --nav-height: 50px;
+}
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+    margin: 0;
+    padding:0;
+}
+ul {
+    padding-inline-start: 0;
+}
+li {
+    list-style: none;
+}
+/* navigation */
+#global-nav {
+    /* 전역 내비게이션을 하나만 사용할 것이므로 id를 지정하는 것이 좋은 방법인 것 같다 */
+    background-color: rgba(0,0,0,0.8);
+    display: block;
+    box-sizing: content-box;
+    width: 100%;
+    min-width: 1024px;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+
+}
+.menu-wrapper {
+    height: inherit;
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto; /* 블록요소 안에서 좌우 마진을 auto로 주면 자식요소가 좌우 중앙정렬이 된다 */
+
+}
+.menu-list {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    color: #e5f5f5;
+    font-size: 0.9em;
+    padding: 0 30px;
+    justify-content: space-between;
+    /* 첫번째 아이템을 영역의 시작 지점에 붙이고, 마지막 아이템을 영역 끝 부분에 붙인 다음
+    나머지 아이템들을 균등분배 */
+    margin: 0 auto;
+}
+.item {
+}
+.icon {
 
 }
 
+.search {
+
+}
+.cart {
+
+}
+/* main content */
 .main {
 
 }
+.hero {
 
-.footer {
+}
+.hero-unit {
+
+}
+.unit-link {
+
+}
+.copy-wrapper {
+
+}
+.hero-img {
+
+}
+.promo {
+
+}
+.content-unit {
+
+}
+.content-img {
+
+}
+
+/* footer */
+
+.footer-wrapper {
+
+}
+.footnote {
+
+}
+.directory {
+
+}
+.general {
 
 }

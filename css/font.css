@@ -5,14 +5,13 @@
     font-family: 'Nanum Gothic';
     font-style: normal;
     font-weight: 400;
-    src: local("Nanum Gothic"),
-        url("./font/NanumGothic-Regular.ttf") format("truetype");
+    src: local('NanumGothic'),
+        url('/font/NanumGothic-Regular.ttf') format("truetype");
 }
-
 @font-face {
     font-family: 'Nanum Gothic';
     font-style: normal;
     font-weight: 700;
-    src: local("Nanum Gothic"),
-        url("./font/NanumGothic-Bold.ttf") format("truetype");
+    src: local('NanumGothic'),
+        url('/font/NanumGothic-Bold.ttf') format("truetype");
 }
