@@ -15,14 +15,25 @@ ul {
 li {
     list-style: none;
 }
+.head-copy {
+    font-weight: 700;
+    font-size: 2.8em;
+}
+.sub-copy {
+    font-size: 1.6em;
+    margin-top: 10px;
+}
+.desc {
+    margin-top: 10px;
+}
+.white-text {
+    color: #f0f0f0;
+}
 /* navigation */
 #global-nav {
     /* 전역 내비게이션을 하나만 사용할 것이므로 id를 지정하는 것이 좋은 방법인 것 같다 */
     background-color: rgba(0,0,0,0.8);
-    display: block;
-    box-sizing: content-box;
     width: 100%;
-    min-width: 1024px;
     height: var(--nav-height);
     position: fixed;
     top: 0;
@@ -32,26 +43,27 @@ li {
 
 }
 .menu-wrapper {
-    height: inherit;
     position: relative;
+    height: inherit;
     max-width: 980px;
+    padding: 0 22px;
     margin: 0 auto; /* 블록요소 안에서 좌우 마진을 auto로 주면 자식요소가 좌우 중앙정렬이 된다 */
 
 }
 .menu-list {
     display: flex;
-    position: absolute;
-    top: 50%;
     width: auto;
+    height: inherit; /* 명시적으로 높이를 줘야 텍스트 요소를 중앙정렬 할수 있다 */
     color: #e5f5f5;
     font-size: 0.9em;
-    padding: 0 30px;
+    padding: 0 10px;
+    align-items: center;
     justify-content: space-between;
     /* 첫번째 아이템을 영역의 시작 지점에 붙이고, 마지막 아이템을 영역 끝 부분에 붙인 다음
     나머지 아이템들을 균등분배 */
-    margin: 0 auto;
 }
 .item {
+
 }
 .icon {
 
@@ -65,22 +77,80 @@ li {
 }
 /* main content */
 .main {
-
+    display: block;
+    padding-top: var(--nav-height); /* 네비게이션 높이 아래쪽에 컨텐츠가 쌓일 수 있게 패딩을 줘야한다 */
+    position: relative;
+    width: 100%;
+    /* background: lightgray; */
 }
-.hero {
-
+.hero-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 690px);
+}
+.hero-wrapper {
+    position: relative; /* hero-unit의 위치를 잡아주는 용도로만 사용될 부모요소 필요 */
 }
 .hero-unit {
-
-}
-.unit-link {
-
+    position: absolute; /* 부모요소의 100%를 다 커버하기 위해 포지션을 지정함 */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; /* 포지션 값이 있는 요소만 z-index가 먹힌다 */
 }
 .copy-wrapper {
-
+    position: relative;
+    padding-top: 60px;
+    text-align: center;
+    z-index: 3;
+}
+.cta-link {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+}
+.cta-link a {
+    color: #2997FF;
+    text-decoration: none;
+}
+.cta-link a:hover {
+    text-decoration: underline;
+}
+.cta-link a:not(:first-child) {
+    margin-left: 40px;
 }
 .hero-img {
-
+    position: absolute;
+    margin: 0 auto;;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.ipad-pro {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/hero_ipad_pro__gl982dtu49im_largetall.jpg');
+    background-position-x: center;
+}
+.iphone-twelve {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/iphone_12_updated__jepm2xpxncuy_largetall.jpg');
+    background-position-x: center;
+}
+.imac-new {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/hero_imac_avail__zbofyl96mzmm_largetall.jpg');
+    background-position-x: center;
 }
 .promo {
 
