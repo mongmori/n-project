@@ -31,6 +31,9 @@ li {
 .white-text {
     color: #f0f0f0;
 }
+.black-bg {
+    background: #000;
+}
 /* navigation */
 #global-nav {
     /* 전역 내비게이션을 하나만 사용할 것이므로 id를 지정하는 것이 좋은 방법인 것 같다 */
@@ -139,7 +142,7 @@ li {
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('../img/hero_ipad_pro__gl982dtu49im_largetall.jpg');
-    background-position-x: center;
+    background-position: center;
 }
 .iphone-twelve {
     position: absolute;
@@ -147,7 +150,7 @@ li {
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('../img/iphone_12_updated__jepm2xpxncuy_largetall.jpg');
-    background-position-x: center;
+    background-position: center;
 }
 .imac-new {
     position: absolute;
@@ -155,7 +158,7 @@ li {
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('../img/hero_imac_avail__zbofyl96mzmm_largetall.jpg');
-    background-position-x: center;
+    background-position: center;
 }
 .promo {
     display: grid;
@@ -202,53 +205,80 @@ li {
 .promo-cta-link a:not(:first-child) {
     margin-left: 40px;
 }
-.-in {
-    position: ;
+.content-clip {
+    width: 100%;
+    bottom:0;
+    left: 0;
+    flex-grow: 1;
+}
+.video-wrapper {
+    position: relative;
     width: 100%;
     height: 100%;
+    bottom: 0;
+    left: 0;
+}
+#wwdc21 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+
+}
+.wwdc21-pre {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
     background-repeat: no-repeat;
-    background-image: url('../img/promo_tradein_nonoffer_us__75jysj4lcuqe_large.jpg');
-    background-position-x: center;
+    background-image: url('../img/promo_tile_startframe__hfyonvym3emy_large.jpg');
+    background-position: center;
+    background-size: contain;
+}
+.wwdc21-post {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-image: url('../img/promo_tile_endframe__c18yebq22be6_large.jpg');
+    background-position: center;
+    background-size: contain;
 }
 .iphonepro12 {
-    position: ;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('../img/iphone_12_pro_us__e5oyysg4k0ya_large.jpg');
-    background-position-x: center;
+    background-position: center;
 }
 .watch6 {
-    position: ;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('../img/promo_watch_series_6_lte__f8lrasjnry2y_large.jpg');
-    background-position-x: center;
+    background-position: center;
 }
 .trade-in {
-    position: ;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('../img/promo_tradein_nonoffer_us__75jysj4lcuqe_large.jpg');
-    background-position-x: center;
+    background-position: center;
 }
 .airtag {
-    position: ;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('../img/promo_airtag__e6b73a64nno2_large.jpg');
-    background-position-x: center;
+    background-position: center;
 }
 .arcade {
-    position: ;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('../img/promo_arcade_wonderbox__emq7ob1vhtw2_large.jpg');
-    background-position-x: center;
+    background-position: center;
 }
 
 
