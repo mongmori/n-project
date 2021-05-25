@@ -2,6 +2,8 @@
 :root {
     /* 반복적으로 재사용할 값들을 변수화해서 모아놓을 수 있다고 함 */
     --nav-height: 50px;
+    --gutter: 12px;
+
 }
 
 body {
@@ -75,7 +77,7 @@ li {
 .cart {
 
 }
-/* main content */
+/* main hero */
 .main {
     display: block;
     padding-top: var(--nav-height); /* 네비게이션 높이 아래쪽에 컨텐츠가 쌓일 수 있게 패딩을 줘야한다 */
@@ -85,7 +87,9 @@ li {
 }
 .hero-grid {
     display: grid;
-    grid-template-rows: repeat(3, 690px);
+    grid-template-rows: repeat(3, 720px);
+    grid-gap: var(--gutter); /* grid 내 row 간격을 준다 */
+    margin-bottom: var(--gutter); /* 마지막 row에는 간격이 없어서 마진으로 줬다 */
 }
 .hero-wrapper {
     position: relative; /* hero-unit의 위치를 잡아주는 용도로만 사용될 부모요소 필요 */
@@ -97,6 +101,7 @@ li {
     top: 0;
     left: 0;
     z-index: 2; /* 포지션 값이 있는 요소만 z-index가 먹힌다 */
+    
 }
 .copy-wrapper {
     position: relative;
@@ -153,14 +158,100 @@ li {
     background-position-x: center;
 }
 .promo {
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter);
 }
-.content-unit {
+
+/* main promop */
+.content-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 580px;
 
 }
 .content-img {
-
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    flex-grow: 1;
 }
+.promo-copy-wrapper {
+    position: relative;
+    flex-grow: 0;
+    padding-top: 60px;
+    text-align: center;
+    z-index: 3;
+}
+.promo-cta-link {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+}
+.promo-cta-link a {
+    color: #2997FF;
+    text-decoration: none;
+}
+.promo-cta-link a:hover {
+    text-decoration: underline;
+}
+.promo-cta-link a:not(:first-child) {
+    margin-left: 40px;
+}
+.-in {
+    position: ;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/promo_tradein_nonoffer_us__75jysj4lcuqe_large.jpg');
+    background-position-x: center;
+}
+.iphonepro12 {
+    position: ;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/iphone_12_pro_us__e5oyysg4k0ya_large.jpg');
+    background-position-x: center;
+}
+.watch6 {
+    position: ;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/promo_watch_series_6_lte__f8lrasjnry2y_large.jpg');
+    background-position-x: center;
+}
+.trade-in {
+    position: ;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/promo_tradein_nonoffer_us__75jysj4lcuqe_large.jpg');
+    background-position-x: center;
+}
+.airtag {
+    position: ;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/promo_airtag__e6b73a64nno2_large.jpg');
+    background-position-x: center;
+}
+.arcade {
+    position: ;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/promo_arcade_wonderbox__emq7ob1vhtw2_large.jpg');
+    background-position-x: center;
+}
+
+
 
 /* footer */
 
