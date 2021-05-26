@@ -1,6 +1,4 @@
 /* 애플처럼 다양한 폰트를 쓰기보다는, 로컬 -> 서버 로딩 순으로 동작하는지만 확인 */
-
-
 @font-face {
     font-family: 'Nanum Gothic';
     font-style: normal;
