@@ -80,8 +80,7 @@ li {
     display: flex;
     width: auto;
     height: inherit; /* 명시적으로 높이를 줘야 텍스트 요소를 중앙정렬 할수 있다 */
-    color: #e5f5f5;
-    font-size: 0.9em;
+    font-size: 0.75em;
     padding: 0 10px;
     align-items: center;
     justify-content: space-between;
@@ -91,15 +90,41 @@ li {
 .item {
 
 }
-.icon {
+.item a {
+    padding: 0 10px;
+    color: #dedede;
+}
+.item a:hover {
+    transition-property: color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
 
+.icon {
+    width: 16px;
+    background-size: 16px 44px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../img/globalnav_apple_image__cxwwnrj0urau_large.svg');
 }
 
 .search {
-
+    width: 18px;
+    background-position: 10px;
+    background-size: 18px 88px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../img/globalnav_search_image__fca9mfoh8a2q_large.svg');
 }
 .cart {
-
+    width: 17px;
+    background-size: 17px 44px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../img/globalnav_bag_image__bmix8075eg4i_large.svg');
 }
 /* main hero */
 .main {
@@ -116,6 +141,8 @@ li {
     margin-bottom: var(--gutter); /* 마지막 row에는 간격이 없어서 마진으로 줬다 */
 }
 .hero-wrapper {
+    display: flex;
+    flex-direction: column;
     position: relative; /* hero-unit의 위치를 잡아주는 용도로만 사용될 부모요소 필요 */
 }
 .hero-unit {
@@ -131,11 +158,13 @@ li {
     padding-top: 60px;
     text-align: center;
     z-index: 3;
+    pointer-events: none; /* div에 커서를 올렸을때 아무 이벤트 없음 */
 }
 .cta-link {
     position: relative;
     display: inline-block;
     margin-top: 30px;
+    pointer-events: all; /* div에 커서 올리면 이벤트 정상 발생 */
 }
 .cta-link a {
     color: #2997FF;
@@ -340,13 +369,14 @@ li {
 
 /* footer */
 .footer-wrapper {
-    width: 980px;
+    max-width: 980px;
     margin: var(--gutter) auto 0 auto;
     font-size: 11px;
     color: #7e7e7e;
 }
 .footnote {
     border-bottom: 1px solid #cecece;
+    word-break: keep-all;
 }
 .footnote ul {
     margin-bottom: var(--gutter);
@@ -360,7 +390,33 @@ li {
     margin-bottom: 0;
 }
 .directory {
-
+    margin: var(--gutter) 0;
+    padding: var(--gutter) 0;
+}
+.directory a {
+    color: #7e7e7e;
+}
+.directory li {
+    line-height: 2em;
+}
+.desktop-directory {
+    display: flex;
+}
+.directory-col {
+    flex-basis: 25%;
+}
+.label-wrapper {
+    margin-top: var(--gutter);
+}
+.label-wrapper:not(:first-child) {
+    margin-top: calc(var(--gutter) * 2);
+}
+.label {
+    color: #515154;
+    font-weight: bold;
+}
+.directory-items {
+    margin: var(--gutter) 0;
 }
 .general {
 
@@ -384,6 +440,7 @@ li {
 }
 .legal-link {
     box-sizing: border-box;
+    font-weight: bold;
     padding: 0 10px;
     border-right: 1px solid #cecece;
 }
