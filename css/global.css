@@ -11,6 +11,15 @@ body {
     margin: 0;
     padding:0;
 }
+footer {
+    background-color: #f5f5f7;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 ul {
     padding-inline-start: 0;
 }
@@ -32,7 +41,8 @@ li {
 .promo-sub-copy {
     margin: 0 auto;
     max-width: 420px;
-    font-size: 1.3em;
+    font-size: 1.1em;
+    line-height: 110%;
     margin-top: 10px;
 }
 
@@ -48,7 +58,7 @@ li {
 /* navigation */
 #global-nav {
     /* 전역 내비게이션을 하나만 사용할 것이므로 id를 지정하는 것이 좋은 방법인 것 같다 */
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.9);
     width: 100%;
     height: var(--nav-height);
     position: fixed;
@@ -115,7 +125,6 @@ li {
     top: 0;
     left: 0;
     z-index: 2; /* 포지션 값이 있는 요소만 z-index가 먹힌다 */
-    
 }
 .copy-wrapper {
     position: relative;
@@ -130,10 +139,6 @@ li {
 }
 .cta-link a {
     color: #2997FF;
-    text-decoration: none;
-}
-.cta-link a:hover {
-    text-decoration: underline;
 }
 .cta-link a:not(:first-child) {
     margin-left: 40px;
@@ -174,6 +179,7 @@ li {
 .promo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 var(--gutter);
     gap: var(--gutter);
 }
 
@@ -185,6 +191,14 @@ li {
     overflow: hidden;
     height: 580px;
 
+}
+.content-unit {
+    position: absolute; /* 부모요소의 100%를 다 커버하기 위해 포지션을 지정함 */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; /* 포지션 값이 있는 요소만 z-index가 먹힌다 */
 }
 .content-img {
     width: 100%;
@@ -254,6 +268,40 @@ li {
     opacity: 0;
     transition: opacity 3s;
 }
+.fadein {
+    animation: fadein 5s;
+    -moz-animation: fadein 5s;
+    -webkit-animation: fadein 5s;
+    -o-animation: fadein 5s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
 .iphonepro12 {
     width: 100%;
     height: 100%;
@@ -268,11 +316,11 @@ li {
     background-image: url('../img/promo_watch_series_6_lte__f8lrasjnry2y_large.jpg');
     background-position: center;
 }
-.trade-in {
+.macbook-air{
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-image: url('../img/promo_tradein_nonoffer_us__75jysj4lcuqe_large.jpg');
+    background-image: url('../img/macbook_air__knzp0i282eyy_large.jpg');
     background-position: center;
 }
 .airtag {
@@ -290,19 +338,59 @@ li {
     background-position: center;
 }
 
-
-
 /* footer */
-
 .footer-wrapper {
-
+    width: 980px;
+    margin: var(--gutter) auto 0 auto;
+    font-size: 11px;
+    color: #7e7e7e;
 }
 .footnote {
-
+    border-bottom: 1px solid #cecece;
+}
+.footnote ul {
+    margin-bottom: var(--gutter);
+    padding: var(--gutter) 0;
+}
+.footnote li {
+    line-height: 110%;
+    margin-bottom: 12px;
+}
+.footnote li:last-child {
+    margin-bottom: 0;
 }
 .directory {
 
 }
 .general {
 
+}
+.store {
+    padding: 12px 0;
+    border-bottom: 1px solid #cecece;
+}
+.legal {
+    padding: 12px 0;
+}
+.copyright {
+    display: inline-block;
+}
+.legal-links-wrapper {
+    display: inline-block;
+    margin-left: 40px;
+}
+.legal-links-wrapper a {
+    color: #515154;
+}
+.legal-link {
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-right: 1px solid #cecece;
+}
+.legal-link:last-child {
+    border-right: none;
+}
+.company {
+    font-size: 8px;
+    padding-bottom: var(--gutter)
 }
