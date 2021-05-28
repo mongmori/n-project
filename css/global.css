@@ -5,7 +5,6 @@
     --gutter: 12px;
 
 }
-
 body {
     font-family: "Nanum Gothic", sans-serif;
     margin: 0;
@@ -45,7 +44,6 @@ li {
     line-height: 110%;
     margin-top: 10px;
 }
-
 .desc {
     margin-top: 10px;
 }
@@ -101,30 +99,6 @@ li {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-}
-
-.icon {
-    width: 16px;
-    background-size: 16px 44px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url('../img/globalnav_apple_image__cxwwnrj0urau_large.svg');
-}
-
-.search {
-    width: 18px;
-    background-position: 10px;
-    background-size: 18px 88px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url('../img/globalnav_search_image__fca9mfoh8a2q_large.svg');
-}
-.cart {
-    width: 17px;
-    background-size: 17px 44px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url('../img/globalnav_bag_image__bmix8075eg4i_large.svg');
 }
 /* main hero */
 .main {
@@ -211,8 +185,7 @@ li {
     margin: 0 var(--gutter);
     gap: var(--gutter);
 }
-
-/* main promop */
+/* main promo */
 .content-wrapper {
     position: relative;
     display: flex;
@@ -337,6 +310,7 @@ li {
     background-repeat: no-repeat;
     background-image: url('../img/iphone_12_pro_us__e5oyysg4k0ya_large.jpg');
     background-position: center;
+    background-size: cover;
 }
 .watch6 {
     width: 100%;
@@ -344,6 +318,7 @@ li {
     background-repeat: no-repeat;
     background-image: url('../img/promo_watch_series_6_lte__f8lrasjnry2y_large.jpg');
     background-position: center;
+    background-size: cover;
 }
 .macbook-air{
     width: 100%;
@@ -351,6 +326,7 @@ li {
     background-repeat: no-repeat;
     background-image: url('../img/macbook_air__knzp0i282eyy_large.jpg');
     background-position: center;
+    background-size: cover;
 }
 .airtag {
     width: 100%;
@@ -358,6 +334,7 @@ li {
     background-repeat: no-repeat;
     background-image: url('../img/promo_airtag__e6b73a64nno2_large.jpg');
     background-position: center;
+    background-size: cover;
 }
 .arcade {
     width: 100%;
@@ -365,6 +342,7 @@ li {
     background-repeat: no-repeat;
     background-image: url('../img/promo_arcade_wonderbox__emq7ob1vhtw2_large.jpg');
     background-position: center;
+    background-size: cover;
 }
 
 /* footer */
@@ -399,7 +377,7 @@ li {
 .directory li {
     line-height: 2em;
 }
-.desktop-directory {
+.directory-wrapper {
     display: flex;
 }
 .directory-col {
@@ -449,5 +427,5 @@ li {
 }
 .company {
     font-size: 8px;
-    padding-bottom: var(--gutter)
+    padding-bottom: var(--gutter);
 }

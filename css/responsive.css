@@ -1,0 +1,122 @@
+/* common */
+.hero-head-copy {
+    font-size: 2em;
+}
+.hero-sub-copy {
+    font-size: 1.2em;
+}
+.promo-head-copy {
+    font-size: 1.8em;
+}
+.promo-sub-copy {
+    font-size: 1em;
+}
+/* navigation */
+#global-nav {
+    /* 전역 내비게이션을 하나만 사용할 것이므로 id를 지정하는 것이 좋은 방법인 것 같다 */
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+.menu-wrapper {
+    position: relative;
+    height: inherit;
+    max-width: 980px;
+    padding: 0 22px;
+    margin: 0 auto; /* 블록요소 안에서 좌우 마진을 auto로 주면 자식요소가 좌우 중앙정렬이 된다 */
+
+}
+.menu-list {
+    display: flex;
+    width: auto;
+    height: inherit; /* 명시적으로 높이를 줘야 텍스트 요소를 중앙정렬 할수 있다 */
+    font-size: 0.75em;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+    /* 첫번째 아이템을 영역의 시작 지점에 붙이고, 마지막 아이템을 영역 끝 부분에 붙인 다음
+    나머지 아이템들을 균등분배 */
+}
+.ipad-pro {
+    background-image: url('../img/hero_ipad_pro_non_avail__fcrsmhs4b7ma_small_2x.jpg');
+    background-size: cover;
+}
+.iphone-twelve {
+    background-image: url('../img/iphone_12_updated__jepm2xpxncuy_small_2x.jpg');
+    background-position: center;
+}
+.imac-new {
+    background-image: url('../img/hero_imac__dqh65mwjj04m_small_2x.jpg');
+    background-position: center;
+}
+.promo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 0;
+    gap: var(--gutter);
+}
+/* footer */
+.footer-wrapper {
+    margin: var(--gutter) auto 0 auto;
+    padding: 0 var(--gutter);
+}
+.directory {
+    margin: var(--gutter) 0;
+    padding: var(--gutter) 0;
+}
+.directory a {
+    color: #7e7e7e;
+}
+.directory li {
+    line-height: 2em;
+}
+.directory-wrapper {
+    flex-direction: column;
+}
+.directory-col {
+    flex-basis: 100%;
+}
+.label-wrapper {
+    margin-top: 0;
+    border-bottom: 1px solid #cecece;
+    position: relative;
+}
+.label-wrapper:not(:first-child) {
+    margin-top: 0;
+    position: relative;
+}
+.label {
+    position: relative;
+    padding: var(--gutter) 0;
+    cursor: pointer;
+}
+.directory-title::after {
+    content: "+";
+    display: inline-block;
+    position: absolute;
+    right:0;
+    margin-right: var(--gutter);
+}
+.directory-items {
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    margin-top: 0;
+}
+.visible {
+    position: static;
+    visibility: visible;
+}
+.legal-links-wrapper {
+    display: block;
+    margin-left: 0;
+    margin-top: 1em;
+}
+.legal-link:first-child {
+    padding-left: 0;
+}

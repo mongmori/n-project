@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/global.css">
-    <script defer src="../js/main.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/responsive.css">
+    <script defer src="js/main.js"></script>
     <title>n-project test</title>
 </head>
 <body>
@@ -166,11 +167,11 @@
                 </ul>
             </section>
             <nav class="directory">
-                <div class="desktop-directory">
+                <div class="directory-wrapper">
                     <div class="directory-col">
                         <div class="label-wrapper">
-                            <div class="label">
-                                <h5>쇼핑 및 알아보기</h5>
+                            <div class="label" id="shopping" onclick="toggleMenu(this.id)">
+                                <h5 class="directory-title">쇼핑 및 알아보기</h5>
                             </div>
                             <ul class="directory-items">
                                 <li><a href="">Mac</a></li>
@@ -187,8 +188,8 @@
                     </div>
                     <div class="directory-col">
                         <div class="label-wrapper">
-                            <div class="label">
-                                <h5>서비스</h5>
+                            <div class="label" id="service" onclick="toggleMenu(this.id)">
+                                <h5 class="directory-title">서비스</h5>
                             </div>
                             <ul class="directory-items">
                                 <li><a href="">Apple Music</a></li>
@@ -199,8 +200,8 @@
                             </ul>
                         </div>
                         <div class="label-wrapper">
-                            <div class="label">
-                                <h5>계정</h5>
+                            <div class="label" id="account" onclick="toggleMenu(this.id)">
+                                <h5 class="directory-title">계정</h5>
                             </div>
                             <ul class="directory-items">
                                 <li><a href="">Apple ID 관리</a></li>
@@ -211,8 +212,8 @@
                      </div>
                     <div class="directory-col">
                         <div class="label-wrapper">
-                            <div class="label">
-                                <h5>App Store</h5>
+                            <div class="label" id="app-store" onclick="toggleMenu(this.id)">
+                                <h5 class="directory-title">App Store</h5>
                             </div>
                             <ul class="directory-items">
                                 <li><a href="">매장 찾기</a></li>
@@ -231,8 +232,8 @@
                     </div>
                     <div class="directory-col">
                         <div class="label-wrapper">
-                            <div class="label">
-                                <h5>비즈니스</h5>
+                            <div class="label" id="business" onclick="toggleMenu(this.id)">
+                                <h5 class="directory-title">비즈니스</h5>
                             </div>
                             <ul class="directory-items">
                                 <li><a href="">Apple과 비즈니스</a></li>
@@ -240,8 +241,8 @@
                             </ul>
                         </div>
                         <div class="label-wrapper">
-                            <div class="label">
-                                <h5>교육</h5>
+                            <div class="label" id="education" onclick="toggleMenu(this.id)">
+                                <h5 class="directory-title">교육</h5>
                             </div>
                             <ul class="directory-items">
                                 <li><a href="">Apple과 교육</a></li>
@@ -252,8 +253,8 @@
                     </div>
                     <div class="directory-col">
                         <div class="label-wrapper">
-                            <div class="label">
-                                <h5>Apple의 가치관</h5>
+                            <div class="label" id="philosophy" onclick="toggleMenu(this.id)">
+                                <h5 class="directory-title">Apple의 가치관</h5>
                             </div>
                             <ul class="directory-items">
                                 <li><a href="">손쉬운 사용</a></li>
@@ -263,8 +264,8 @@
                             </ul>
                         </div>
                         <div class="label-wrapper">
-                            <div class="label">
-                                <h5>Apple 정보</h5>
+                            <div class="label" id="info" onclick="toggleMenu(this.id)">
+                                <h5 class="directory-title">Apple 정보</h5>
                             </div>
                             <ul class="directory-items">
                                 <li><a href="">Newsroom</a></li>
