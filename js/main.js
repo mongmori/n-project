@@ -10,11 +10,11 @@ video.addEventListener('ended', function(end){
 // 하단 디렉토리 메뉴 모바일 대응
 
 const getEvent = function getEvent(event) {
-    const target = event.currentTarget;
-    const sibilng = target.nextSibling.nextSibling;
-    if(sibilng.classList == "directory-items") {
-        sibilng.classList.add('visible');
+    let target = event.currentTarget;
+    let sibling = target.nextSibling.nextSibling;
+    if(sibling.classList == "directory-items") {
+        sibling.classList.add('visible');
     } else {
-        sibilng.classList.remove('visible');
+        sibling.classList.remove('visible');
     }
 }
